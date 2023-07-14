@@ -1,4 +1,5 @@
 <?php
+//ابحث عن كلمة تكليفات لايجاد الحلول 
 // define("hello", 'adham');
   /*
   ===================================================================================
@@ -580,15 +581,15 @@ Line 2
     // $$a = "elzero";
     // $$$a = "school";
 
-    // echo $a;
+    // echo $a;//osama
     // echo "<br>";
-    // echo $$a;
+    // echo $$a;//elzero
     // echo "<br>";
-    // echo $osama;
+    // echo $osama;//elzero
     // echo "<br>";
-    // echo $$$a;
+    // echo $$$a;//school
     // echo "<br>";
-    // echo $elzero;
+    // echo $elzero;//school
     // echo "<br>";
     // echo "Hello ${$a}"; // $$a الكتير جو الشوية برا 
     // echo "<br>";
@@ -1097,7 +1098,7 @@ Line 2
 
       // $arr4=[1 =>"10", 2 =>"20"];
       // $arr5=[2 =>20, 1 =>10];
-      
+      //don't care about data type 
       // var_dump($arr4 == $arr5);// only same key same value 
       // echo "<br>";
       // var_dump($arr4 != $arr5);// false
@@ -1824,7 +1825,6 @@ Line 2
      /*
     Control Structure
     - Loop
-
     Do, While
   */
   // $i = 4;
@@ -2284,7 +2284,7 @@ Line 2
   //   $result+=$arg;
   //  endforeach;
   //   echo $result;
-  #################################
+  // #################################
   // echo "Argument Index Number 3 Is : ".$nums[3];
   //   echo "<pre>";
   //   print_r($nums);
@@ -2295,7 +2295,7 @@ Line 2
   //  endforeach;
   //   echo $result;
   // }
-      // calculate(10,20,50,30,40);
+  //      calculate(10,20,50,30,40);
 //?##################################################################################################################################
 
    /*
@@ -2695,6 +2695,11 @@ Line 2
         //     $$message = $message;
         //     return "$message";
         //     };
+        //$message = "Hello";
+        //$$message=&$message;
+        //$$message=function($name) use($message){
+        //    return "{$message} $name";
+        //};
         // echo $Hello("Osama"); // Hello Osama
         ###########################################
         //التكليف 09
@@ -2933,13 +2938,13 @@ Line 2
 
       // echo "Hello [] () * + . <br>";
       // echo quotemeta("Hello [] () * + . <br>");
-      // الاولوية فى الاعداد الفردية هتبقى للى على اليمين الاول
+      // // الاولوية فى الاعداد الفردية هتبقى للى على اليمين الاول
       // echo str_pad("12", 8, 0, STR_PAD_BOTH) . "<br>";
       // echo str_pad("321", 8, 0, STR_PAD_BOTH) . "<br>";
       // echo str_pad("1313", 8, 0, STR_PAD_LEFT) . "<br>";
       // echo str_pad("15435", 8, 0, STR_PAD_LEFT) . "<br>";
       // echo str_pad("500432", 8, 0, STR_PAD_LEFT) . "<br>";
-      // echo strtr("E@zero Web Sch##@","@","l");
+      // echo strtr("E@zero Web Sch##@","@","l");// stand for string translation 
       // echo "<br>";
       // $translation = ["@" => "l", "#" => "o"];
       // echo strtr("E@zero Web Sch##@",$translation);
@@ -2993,7 +2998,7 @@ Line 2
 
   // echo substr_replace("onetwo",1,0);//1 1
   // echo "<br>";
-  // echo substr_replace("onetwo",1,3);//one1
+  // echo substr_replace("onetwo",1,3);//one1  هتبدى تبدل من اول مكان 3 
   // echo "<br>";
   // echo substr_replace("onetwo",1,5);//oneTw1
   // echo "<br>";
@@ -3117,13 +3122,15 @@ Line 2
     // echo ucfirst(strrev(lcfirst($str)));
     // echo "<br>";
     //التكليف 3
-    // $str = 'aAa';
-    // $num = 3;
-    // $char = "_";
-    // echo str_repeat(strtolower($str.$char),$num);
+    //  $str = 'aAa';
+    //  $num = 3;
+    //  $char = "_";
+    //  echo str_repeat(strtolower($str.$char),$num);
+    //  echo "<br>";
+    // echo strtolower(chunk_split(str_repeat($str,$num),$num,$char));
     //التكليف 4
     // $str = "<div><b>Elzero</b></div>";
-    // echo strip_tags($str,"<b>");
+    // echo strip_tags($str,"<b>");// what is will ignore
     //التكليف 5
     // $str = "Elzero Web School";
     // $e = "e";
@@ -3170,12 +3177,13 @@ Line 2
   */
   // $friends = ["Osama", "Ahmed", "Sameh", "Mahmoud", "Gamal"];
   // echo "<pre>";
-  // print_r(array_chunk($friends,2));
+  // $arr=array_chunk($friends,2);
+  // print_r($arr);
   // echo "</pre>";
 
   // $countries = ["EG" => "Egypt", "KSA" => "Saudi Arabia", "Sy" => "Syria", "USA" => "United States"];
   // echo "<pre>";
-  // print_r(array_chunk($countries,2,TRUE));//true to save keys =>EG, KSA
+  // print_r(array_chunk($countries,2,true));//true to save keys =>EG, KSA
   // echo "</pre>";
 
   // echo "<pre>";
@@ -3265,7 +3273,6 @@ Line 2
       //   "CSS" => 65
       // ];
       // if(array_key_exists("HTML",$courses)): // to check type add another parmeter
-
       //   echo "The course Is Found";
       //   echo "<br>";
       //   echo "The Price Is: ".$courses["HTML"];
@@ -3321,7 +3328,7 @@ Line 2
   // print_r(array_values($countries));
   // echo '</pre>';
 
-  // $pad = ["A", "B", "C", "D"];
+  $pad = ["A", "B", "C", "D"];
 
   // echo "<pre>";
   //     print_r(array_pad($pad,10,"@"));//after
@@ -3609,7 +3616,7 @@ Line 2
 
   // $countries = ["S" => "Syria", "E" => "Egypt", "I" => "Iraq", "Q" => "Qatar"];
 
-  // asort($countries);
+  // asort($countries);//sort based on values
   
   // echo '<pre>';
   // print_r($countries);
@@ -3623,13 +3630,13 @@ Line 2
 
   // $codes = ["1" => "Syria", "3" => "Egypt", "2" => "Iraq", "5" => "Qatar"];
 
-  // ksort($codes);
+  // ksort($codes);//sort based on key Ascending
 
   // echo '<pre>';
   // print_r($codes);
   // echo '</pre>';
 
-  // krsort($codes);
+  // krsort($codes);//Descending
 
   // echo '<pre>';
   // print_r($codes);
@@ -3744,7 +3751,7 @@ Line 2
     // $codes = ["H", "C", "J"];
     // $means = ["HTML", "CSS", "JavaScript"];
     // echo "<pre>";
-    // print_r(array_combine($codes,$means));
+    // print_r(array_combine(array_map('strtolower',$codes),$means));
     // echo "</pre>";
     ############################
     // التكليف 3 
@@ -3775,6 +3782,12 @@ Line 2
     //     return $carry+$item;
     // }
     // echo array_reduce($nums,"add");
+  //   echo array_reduce($nums, function($carry, $value) {
+  //     if ($value == 5)
+  //         return $carry;
+  //     else
+  //         return $carry + $value;
+  // });
     ############################
     // التكليف 6
     // $chars = ["A", "B", "C", "D", "E"];
@@ -3999,21 +4012,21 @@ Line 2
   // echo abs(-20) . "<br>";
 
   // echo rand() . "<br>";
-  // echo mt_getrandmax() . "<br>";
-  // echo rand(50, 60) . "<br>";
-  // echo 10 / 5 . "<br>";
+  // echo mt_getrandmax() . "<br>";// return maximum value can be generated
+  // echo rand(50, 60) . "<br>";//rand value between 50 60
+  // echo 10 / 5 . "<br>";// 10 / 5= 2
   // echo gettype(10 / 5) . "<br>";
 
-  // echo 11 / 5 . "<br>";
+  // echo 11 / 5 . "<br>";//double value
   // echo gettype(11 / 5) . "<br>";
 
   // echo intdiv(11, 5) . "<br>";
-  // echo gettype(intdiv(11, 5)) . "<br>";
+  // echo gettype(intdiv(11, 5)) . "<br>";//give always interger value
 
   // echo 11.5 % 5 . "<br>";
   // echo gettype(11 % 5) . "<br>";
 
-  // echo fmod(11.5, 5) . "<br>";
+  // echo fmod(11.5, 5) . "<br>";//give % double value
   // echo gettype(fmod(11.5, 5)) . "<br>";
 //?##################################################################################################################################
 
@@ -4148,8 +4161,8 @@ Line 2
   // print_r(filter_list());
   // echo '</pre>';
   // echo filter_id("boolean"). "<br>";
-  // $val="on"; // True || 1 || "yes" || "on"
-  // // if(filter_var($val,258)) {
+  $val="on"; // True || 1 || "yes" || "on"
+   // if(filter_var($val,258)) {
   // if(filter_var($val,FILTER_VALIDATE_BOOL)) {
 
   //     echo "This Is True";
@@ -4349,17 +4362,18 @@ Line 2
   ===================================================================================
     */ 
     //تكليف 1 
-    // echo rand(10,20);
+    // echo rand(11,19);
     // echo "<br>";
-    // echo rand(10,20);
+    // echo rand(11,19);
     // echo "<br>";
-    // echo rand(10,20);
+    // echo rand(11,19);
     // echo "<br>";
-    // echo rand(10,20);
+    // echo rand(11,19);
     #####################################
     // تكليف 2
     // $friends = ["Osama", "Ahmed", "Sayed", "Ibrahim"];
-    // echo $friends[shuffle($friends)];
+    // echo $friends[shuffle($friends)];//return 1 but each time the array is shuffled in different way 
+    //echo $friends[rand(0,3)];//another way
     #####################################
     // تكليف 3
       //  $num1 = 11.5; // 11
@@ -4379,6 +4393,18 @@ Line 2
     // endforeach;
     // echo "<pre>";
     // print_r($result);
+    // echo "</pre>";
+    /////////////////////////
+    // Another Way
+    // $values=[];
+    // $keys=[];
+    // foreach (filter_list() as $key => $value){
+    // array_push($values,$value);
+    // array_push($keys,filter_id($value));
+    // }
+    // $mix=array_combine($keys,$values);
+    // echo "<pre>";
+    // print_r($mix);
     // echo "</pre>";
     #####################################
     // تكليف 5
@@ -4473,6 +4499,8 @@ Line 2
     --- Gets File Permissions
     - clearstatcache()
     --- Clear Cache
+    we using clearstatcache() because when file is changed we need to clear cache or it will 
+    keep old data in cache and not show new data
 
     - You Can Change Owner chown()
     - You Can Change Group chgrp()
@@ -4565,7 +4593,7 @@ Line 2
   --- [a] For Write => Pointer At The End + Create If Not Exists
   --- [a+] For Read & Write => Pointer At The End + Create If Not Exists
   --- [x] Create + Open For Write => Pointer At The Beginning
-  --- [x+] Create + Open For Read & Write => Pointer At The Beginning
+  --- [x+] Create + Open For Read & Write => Pointer At The Beginning if the file exists it will return error
 
   - fwrite(File[Required], String[Required], Length[Optional])
   --- Write To An Open File
@@ -4606,15 +4634,14 @@ Line 2
       // $handle=fopen("adham.txt","r");
 
       // $line=1;
-
+      // echo "<br>";
       // while (! feof($handle)) {
       //   echo "Line $line => ".fgets($handle) . "<br>"; 
       //   $line++;
       // }
+      // echo "<br>";
       // for ($i = 0; $i < count(file("adham.txt")); $i++) {
-
-      //   echo fgets($handle) . "<br>";
-      
+      //   echo "$line => ".fgets($handle) . "<br>";
       // }
       // fclose($handle);
 //?##################################################################################################################################
@@ -4630,8 +4657,8 @@ Line 2
 
   - rewind(File[Required])
   --- Return The Pointer To The Beginning Of The File
-
-  - ftell(File[Required])
+      
+  - ftell(File[Required]) => new line +carriage return to start of line 
   --- Return Current Position Of The Pointer
 
   - fseek(File[Required], Offset[Required], Whence[Optional] = SEEK_SET)
@@ -4687,11 +4714,14 @@ Line 2
   --- Delete A File
 
   Same Concept
-  - opendir()
-  - readdir()
-  - closedir()
+  - opendir() => open a directory 
+  - readdir() => read the content of a directory
+  - closedir() => close a directory
+  ! $_FILES is a PHP superglobal variable that is used to handle file uploads from HTML forms. It is populated automatically by PHP when a file is uploaded via an HTML form with the enctype="multipart/form-data" attribute. 
+  !$_FILES is an associative array that contains information about the uploaded file, including the file's name, type, size, temporary filename, and any error codes associated with the upload process. 
+  ! You can access the elements of $_FILES using their keys, which correspond to the name attributes of the input fields in the HTML form. For example, if your HTML form contains an input field with the name "my_file", you can access information about the uploaded file using $_FILES["my_file"].
     */
-
+    // test/adham.txt
     // echo "<pre>";
     // print_r(glob("test/*.*"));
     // echo "</pre>";
@@ -4733,9 +4763,10 @@ Line 2
   - Return Number Of Bytes
 
   Search
-  - Get Set Include Path
+  - Get Set Include Path returns a string containing the current include_path configuration option for PHP. 
     */
         // echo get_include_path()."<br>";
+        //true mean search in the inlcude path
         // echo file_get_contents("part1.txt",true,NULL,14,7);
         // echo file_get_contents("https://elzero.net");
         //  print_r(file("https://elzero.net"));
@@ -4759,6 +4790,7 @@ Line 2
           // mkdir("programming");
           // mkdir("programming/PHP");
           // chmod("programming",0740);
+          // // echo fileperms("programming/PHP");
           // if(file_exists("programming/PHP")):
           //     echo "Directory Programming/PHP Removed"."<br>";
           //     rmdir("programming/PHP");
@@ -4802,11 +4834,33 @@ Line 2
 
         // // Method 4
         // echo basename($_SERVER['PHP_SELF']);
-        // تكليف 6  
+        // // Method 5 
+        // $pos = strrpos(__FILE__, '\\');
+        // $filename = substr(__FILE__, $pos + 1);
+        // echo $filename; // Outputs "test.php"
+        //تكليف 6 
+        // way 1
+          // echo file("elzero.txt")[0].file("elzero.txt")[1];
+          // echo "<br>";
+          // $handle=fopen("elzero.txt",'r');
+          // way 2
+          // echo fgets($handle)." ".fgets($handle);
+          // way 3
+          // $lines=file_get_contents("elzero.txt");
+          // $lines=explode("\n",$lines);
+          // echo "<br>";
+          // echo "{$lines[0]}{$lines[1]}";
+          // echo "<br>";
+          // fclose($handle);
+        // تكليف 7  
           // $handle=fopen('elzero.txt','r+');
           // fseek($handle,6);
           // fwrite($handle,'Elzero');
           // fclose($handle);
+          //another solution 
+          // $str=file_get_contents("elzero.txt");
+          // $newcontent=str_replace("Osamaa ","Elzero ",$str);
+          // file_put_contents("elzero.txt",$newcontent);
  //?##################################################################################################################################
 
   /*
@@ -4849,14 +4903,14 @@ Line 2
   // // Echo Date with Format
   //       echo date_format($d,"Y-m-d H:i:s");
   // //check Date
-  //       echo "<br>";
-  //       var_dump(checkdate(10,25,1982));
-  //       echo "<br>";
-  //       var_dump(checkdate(31,2,1982));
-  //       echo "<br>";
+        // echo "<br>";
+        // var_dump(checkdate(10,25,1982));
+        // echo "<br>";
+        // var_dump(checkdate(31,2,1982));//error no 31 in month 2 in 1982
+        // echo "<br>";
  //?##################################################################################################################################
 
-  /*
+  /* 
    =============================================================================================
    ========================= Datetime Functions Part 2 – Data Format Part 1  ===================
    =============================================================================================
@@ -4883,6 +4937,10 @@ Line 2
     - l => Full Text
     - z => Day Of The Year 0-365
     - S => st, rd, nth Suffix For Day Of The Month
+    st => first day
+    nd => second day
+    rd => Third Day
+    th => other days in the month
 
     [Time]
     - a => Small am/pm
@@ -4902,7 +4960,7 @@ Line 2
   */
       // date_default_timezone_set("Africa/Cairo");
       
-      // $d=date_create('2022-10-01 15:5:10');
+      $d=date_create('2022-12-31 15:5:10');
       // $d=date_create('');
       // echo date_format($d,"Y")."<br>";//2023
       // echo date_format($d,"y")."<br>";//23
@@ -4912,12 +4970,12 @@ Line 2
       // echo date_format($d,"Y-F")."<br>";//23
       // echo date_format($d,"t")."<br>";//28
       ///////////////////////////////////////
-      // echo date_format($d,"Y-m-d")."<br>";
-      // echo date_format($d,"Y-m-j")."<br>";
-      // echo date_format($d,"Y-m-D")."<br>";
-      // echo date_format($d,"Y-m-l")."<br>";
-      // echo date_format($d,"Y-m-l-z")."<br>";
-      // echo date_format($d,"Y-m-l-djDl")."<br>";
+      // echo date_format($d,"Y-m-d")."<br>";//print with leading zero 01
+      // echo date_format($d,"Y-m-j")."<br>";//wihout leading zero
+      // echo date_format($d,"Y-m-D")."<br>";//part of day name
+      // echo date_format($d,"Y-m-l")."<br>";//full day name
+      // echo date_format($d,"Y-m-l-z")."<br>";//number of days for this year
+      // echo date_format($d,"Y-m-l-djDl")."<br>";//use combination
       // echo date_format($d,"Y-m-l-S")."<br>"; 
       ///////////////////////////////////////
       //  echo date_format($d,"Y-m-d g a")."<br>";
@@ -4942,13 +5000,14 @@ Line 2
      /*
     Date And Time Functions
 
-    - date_interval_create_from_date_string()
+    - date_interval_create_from_date_string() the best used in comparsion
     - date_add()
     - date_sub()
     - date_modify()
   */
     //  date_default_timezone_set("Africa/Cairo");
     //  $d=date_create();
+    //  echo date_format($d,"Y/m/d H-i-s a");
     //  date_add($d, date_interval_create_from_date_string('1 year 2 months 5 days'));
     //  date_sub($d, date_interval_create_from_date_string('1 year 2 months 5 days'));
     //  date_modify($d, '+1 year +12 month ');
@@ -5013,9 +5072,9 @@ Line 2
 //?##################################################################################################################################
 
   /*
-   ===============================================================================================
-   ======================= Datetime Functions Part 6 – Date_Diff, Strtotime  =====================
-   ===============================================================================================
+   =======================================================================================
+   ======================= تكليفات PHP Bootcamp من الدرس 92 إلى 97 =====================
+   =======================================================================================
     */ 
       //!تكليف 1 
       //  date_default_timezone_set('Asia/Riyadh');
@@ -5037,7 +5096,7 @@ Line 2
       //!تكليف 3
       // $date = "1950-10-01";
       // date_default_timezone_set('Africa/Cairo');
-      // echo strtotime($date);
+      // echo strtotime($date);//seconds from 1970-01-01
       // echo "<br>";
       // echo time();
       // echo "From Epoch Time Till 1990-10-01 Is Approximately ".floor((time() - strtotime($date)) / (60 * 60 * 24))." Days";
@@ -5054,6 +5113,7 @@ Line 2
       //!تكليف 5
       // Using Date() Function.
       // echo date('U') . "<br>"; // 1668020233. //array we get only seconds from timestamp
+      // echo getdate()[0];
 
       // Using gettimeofday() Function.
       // $t = gettimeofday(); 
@@ -5062,7 +5122,7 @@ Line 2
       // Using microtime() Function. 
       // echo microtime(true) . "<br>"; // 1668020233 return float but if we use false it will return string
 //?##################################################################################################################################
-  /*
+  /*  
    ===============================================================================================
    =================================== How To Use Cookies Part 1  ================================
    ===============================================================================================
@@ -5113,8 +5173,9 @@ Line 2
   // print_r($_COOKIE);
   // echo "</pre>";
   // echo $_COOKIE['style'];
+  
 //?##################################################################################################################################
-  /*
+  /*   
    ===============================================================================================
    =================================== Cookies Modify And Delete  ================================
    ===============================================================================================
@@ -5274,6 +5335,82 @@ Cookies
   // header("Location: test.php");
   // exit;
 //?##################################################################################################################################
+  /*
+   =========================================================================================================================
+   ======================================  تكليفات PHP Bootcamp من الدرس 98 إلى 105 ======================================
+   =========================================================================================================================
+    */ 
+//! تكليف 1 
+// setcookie("site[layout]",'boxed',time()+65*24*60*60);
+// setcookie("site[font]",'swat',time()+65*24*60*60);
+// setcookie("site[blue]",'blue',time()+65*24*60*60);
+//! تكليف 2 
+// echo "<pre>";
+// print_r($_COOKIE);
+// echo "</pre>";
+// echo "Your Color IS {$_COOKIE ['site']['blue']} Your Font Is  {$_COOKIE ['site']['font']}";
+//! تكليف 3 
+// setcookie("site[layout]",'boxed',time()-1);
+//! تكليف 4
+// setcookie("site[font]", 'swat', 0);
+// setcookie("site[blue]", 'blue', 0);
+// session_destroy();
+// session_unset();
+//?##################################################################################################################################
+//COMM########################################################
+/**
+ * Sleep(Seconds)
+ * usleep(Useconds)
+ * time_sleep_until(Timestamp)
+ */
+function checkfile(){
+  if(file_exists("adham.txt")){
+    echo "Good File is Found ";
+  }
+  else{
+    sleep(5);
+    checkfile();
+  }
+}
+echo checkfile();
+//COMM########################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // function add_commas_and_underscore($number) {
 //   $result=number_format($number);
 //   if(strlen($number)>3)
