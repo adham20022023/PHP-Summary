@@ -6120,7 +6120,7 @@ Cookies
   // echo "<pre>";
   // print_r($copy);
   // echo "</pre>";
-//*##################################################################################################################################
+//?##################################################################################################################################
  /*
   =====================================================================================
   ========================= Static Properties and Methods ============================
@@ -6153,7 +6153,7 @@ Cookies
   // echo $phone->name;// Accessing static property Iphone::$name as non static in
   // echo Iphone::say_hello()."<br>";
   // echo IPhone::$name;
-//*##################################################################################################################################
+//?##################################################################################################################################
  /*
   =====================================================================================
   ================================ Methods Chaining ===================================
@@ -6185,7 +6185,7 @@ Cookies
   // // $phone->saywelcome();
   // $phone->presspower()->bootphone()->saywelcome();
   // echo "<pre>"; print_r($phone); echo "</pre>";
-//*##################################################################################################################################
+//?##################################################################################################################################
  /*
   =====================================================================================
   ================================ Traits Part 1 ===================================
@@ -6203,28 +6203,252 @@ Cookies
    * - Can Have Methods.
    * - Have Priority Over Class
    */
-  class Iphone{
-    public $user;
-    public $email;
-
-  }
-
-  $phone=new Iphone();
-  echo "<pre>"; print_r($phone); echo "</pre>";
-//*##################################################################################################################################
+//?##################################################################################################################################
  /*
   =====================================================================================
-  ================================ Traits Part 1 ===================================
+  ================================ Traits Part 2 ===================================
   =====================================================================================
   */
   /**
    * 
    */
+  // trait fingerprint{
+  //   public function fingerfeature(){
+  //     echo "this is finger print feature<br>";
+  //   }
+  // }
+  // trait ThreeDimensionTouch{
+  //   public function ThreeD(){
+  //     echo "this is 3D Touch feature<br>";
+  //   }
+  // }
+  // trait FaceDetection{
+  //   public function facefeature(){
+  //     echo "this is face Detect feature<br>";
+  //   }
+  // }
+  // class Iphone{
+  //   use fingerprint;
+  //   use ThreeDimensionTouch;
+  //   use FaceDetection;
+  //   function sayhello(){
+  //     echo "hello From IPhone";
+  //   }
+  // }
+  
+  // class sony{
+  //   use FaceDetection;
+  // }
+  // class Nokia{
 
+  // }
+  // $phone=new Iphone();
+  // echo "<pre>"; print_r($phone); echo "</pre>";
+  // $phone->fingerfeature();
+  // $phone->ThreeD();
+  // $phone->facefeature();
+  // $phone->sayhello();
+  // echo "<hr>";
+  // $sony=new sony();
+  // echo "<pre>"; print_r($sony); echo "</pre>";
+  // $sony->facefeature();
+  // echo "<hr>";
+  // $nokia=new Nokia();
+  // echo "<pre>"; print_r($nokia); echo "</pre>";
+  // echo "<hr>";
+//?##################################################################################################################################
+ /*
+  =====================================================================================
+  ================================ Traits Part 3 ===================================
+  =====================================================================================
+  */
+  // trait fingerprint{
+  //   public function fingerfeature(){
+  //     echo "this is finger print feature<br>";
+  //     return $this;
+  //   }
+  // }
 
+  // trait ThreeDimensionTouch{
+  //   public function ThreeD(){
+  //     echo "this is 3D Touch feature<br>";
+  //     return $this;
+  //   }
+  // }
 
+  // trait FaceDetection{
+  //   public function facefeature(){
+  //     echo "this is face Detect feature<br>";
+  //     return $this;
+  //   }
+  // }
 
+  // trait allfeatures{
+  //   use fingerprint,ThreeDimensionTouch,FaceDetection;
+  // }
+  // class Iphone{
+  //     use allfeatures;
+  //   function sayhello(){
+  //     echo "hello From IPhone";
+  //     return $this;
+  //   }
+  // }
+  
+  // class sony{
+  //   use FaceDetection;
+  // }
+  // class Nokia{
 
+  // }
+  //!----------------------------------------- new 
+  // trait myfeature{
+  //       public function sayHello(){
+  //         echo "hello from trait";
+  //       }
+  // }
+  // class AppleDevice{
+  //   public function sayhello() {
+  //     echo "hello from class";
+  //   }
+    
+  // }
+  // class Iphone extends AppleDevice{
+  //   use myfeature;
+  // }
+  // $phone=new Iphone();
+  // echo "<pre>"; print_r($phone); echo "</pre>";
+  // // $phone->fingerfeature()->ThreeD()->facefeature()->sayhello();//try the cahin 
+  // $phone->sayhello();//given higher perority for trait
+ /*
+  =====================================================================================
+  ================================= Traits Part 4 ====================================
+  =====================================================================================
+  */
+  /**
+   * 
+   */
+//     trait myfeature1{
+//         public function feature(){
+//           echo "This is Feature Number One<br>";
+//         }
+//   }
+//   trait myfeature2{
+//     public function feature(){
+//       echo "This is Feature Number Two<br>";
+//     }
+// }
+//   class iphone{
+//     use myfeature1, myfeature2{
+//       // [Trait Name] [::] [Method Name] [Keyword as] [New name]
+//       myfeature2:: feature as f2adham;
+//       // [Trait Name] [::] [Method Name] [Insteadof Other Method Name]
+//       myfeature1::feature insteadof myfeature2;
+//     }
+
+//   }
+//   $phone=new Iphone();
+//   echo "<pre>"; print_r($phone); echo "</pre>";
+//   $phone->feature();// تصادم هيحصل هنا 
+//   $phone->f2adham();
+//?##################################################################################################################################
+ /*
+  =====================================================================================
+  ================================= Namespace Part 1 ====================================
+  =====================================================================================
+  */
+  /**
+   * NameSpace => Two Classes have The Same Main :)  
+   */
+  // class Testing {// global Class Namespace
+  //   public $test;
+  // }
+  // $test=new Testing();
+  // echo "<pre>"; print_r($test); echo "</pre>";
+//?##################################################################################################################################
+ /*
+  =====================================================================================
+  ================================= Namespace Part 2 ====================================
+  =====================================================================================
+  */
+  /**
+   * How To Use NameSpace
+   * namespaceاعبتر ان كل كلاس ليه كوكب بيعيش فيه تحت مظلة  
+   */
+  // require_once 'apple.php';
+  // require_once 'sony.php';
+  // require_once 'lg.php';
+  // namespace Apple;
+  // class createphone{ // sepeate in different file apple.php
+  //   public $name;
+  //   public function sayhello(){
+  //     echo "hello from Apple Company";
+  //   }
+  // }
+  // namespace Sony;
+  // class createphone{// sepeate in different file sony.php
+  //   public $name;
+  //   public function sayhello(){
+  //     echo "hello from Sony Company";
+  //   }
+  // }
+  // namespace LG;
+  // class createphone{// sepeate in different file Lg.php
+  //   public $name;
+  //   public function sayhello(){
+  //     echo "hello from LG Company";
+  //   }
+  // }
+  // $iphone=new sony\createphone();//add namespace here
+  // $iphone->sayhello();
+//?##################################################################################################################################
+ /*
+  =====================================================================================
+  ================================= Namespace Part 3 ====================================
+  =====================================================================================
+  */
+  /**
+   * NameSpace => Two Classes have The Same Main :)  
+   * not good to have more than one namespace in the same file 
+   */
+    // require_once 'apple.php';
+    // require_once 'sony.php';
+    // require_once 'lg.php';
+    //comm
+    // namespace Apple\Hardware\phones;
+    // class createphone{ // sepeate in different file apple.php
+    //   public $name;
+    //   public function sayhello(){
+    //     echo "hello from Apple Company";
+    //   }
+    // }
+    // namespace Apple\Hardware\pcs;
+    // class createTablet{ // sepeate in different file apple.php
+    //   public $name;
+    //   public function sayhello(){
+    //     echo "hello from Tablet Company";
+    //   }
+    // }
+    //comm
+    // $iphone=new Apple\Hardware\pcs\createTablet();//add namespace here
+    // $iphone->sayhello();
+//?##################################################################################################################################
+
+ /*
+  =====================================================================================
+  ================================= Auto Load Classes ====================================
+  =====================================================================================
+  */
+  /**
+   * not good to do a lot of require for each class 
+   * the name of the file should be the same name of the calss
+   */
+  //! make A seprate folder for all classes and put your classes files inside it 
+  // spl_autoload_register(function($class){
+  //   require "classes/".$class.".php";
+  // });
+  // $var=new test2();
+  // $var->test2();
+//?##################################################################################################################################
 
 //COMM########################################################
 /**
