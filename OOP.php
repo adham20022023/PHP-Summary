@@ -1,10 +1,105 @@
 <?php 
 /*
   =====================================================================================
-  ================================= INTRODUCTION To OOP ====================================
+  ================================= Revision on OOP ===============================
   =====================================================================================
 */
+/**
+ * * Four principles of OOP
+ * * 1. Abstraction التجريد
+ * * 2. Encapsulation التغليف
+ * * 3. Inheritance الوراثة
+ * * 4. Polymorphism تعدد الاشكال 
+ */
+ //h1 array of object  not used 
+   // $list_of_object=(object)[
+   //  "name"=>"elzero",
+   //  "age"=>20
+   // ];
+   // echo $list_of_object->name;
+   // $list_of_object->not_exists="i'm here ";
+   // print_r($list_of_object);
+ //h1 call back function 
+   /**
+    * * callback function the the function passed to another function  as an argument
+    */
+   //  function callback(){
+   //    return "hello ";
+   //  }
+   //  function main($callback){
+   //    return "$callback"."world";
+   //  }
+   //  echo main(callback());
+ //h1 take object from class 
+   /**
+    ** any class have consists of $variables => properties and functions => methods 
+    */
+   //  class test{
+   //    public $name;
+   //    public $age;
+   //    public function sayHello(){
+   //       echo "Hello World";
+   //    }
+   //  }
+   //  $object = new test();
+   //  $object->name="adham";
+   //  $object->age="20";
+   //  print($object->name);
+   //  print($object->age);
+   //  echo "<hr>";
+   //  $object->sayHello();
+//h1 chaining methods  you can do it with static methods too
+ /**
+  * * chaining methods 
+  * *It allows you to call multiple methods on an object in a single line of code, one after the other, by using the return value of each method to call the next one. This creates a chain of method calls.
+  */
+//   class message {
+//    public $message;
+//    public function openchat(){
+//       echo "open chat <br>";
+//       return $this;
+//    }
+//    public function send(){
+//       echo $this->message.'<br>';
+//       return $this;
+//    }
+//    public function closechat(){
+//       echo "close chat <br>";
+//       // print_r($this);//! return the current class
+//       return $this;
+//    }
+//   }
+//   $student=new message();
+//   $student->message="task 2 complete";
+//   $student->openchat()->send()->closeChat()->openChat();
+//h1 Refer to the class only object can't access it 
+class user{
+   public $name;
+   public static $status="active";
+   public const bonus=50;
+   public function login(){
+      $this->name;
+      $this->register();
+      user::$status;
+      user::bonus;
+      user::logout();
+      //self => refer to current class 
+      self::$status;
+      self::bonus;
+      self::logout();
 
+   }
+   public function register(){
+
+   }
+   public static function logout(){
+      echo "logout";
+   }
+}
+$user=new user();
+print_r($user);// will print only the name of the class
+echo user::$status; //access directly with the class name 
+user::logout();
 
 
 
