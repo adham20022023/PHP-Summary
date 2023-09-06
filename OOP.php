@@ -101,34 +101,34 @@
 // echo user::$status; //access directly with the class name 
 // user::logout();
 //h1 inheritance 
- class user{//! final class  keyword can't extends other classes
-   public $name;
-   public static $status="active";
-   public function login($args){//? support override  not support overload
+//  class user{//! final class  keyword can't extends other classes
+//    public $name;
+//    public static $status="active";
+//    public function login($args){//? support override  not support overload
 
-   }
-   public function logout(){
-      print("logout");
-   }
-}
-class normal_user extends user{
-   public function login($arg){
-      print("login as normal user");
-   }
-}
-class admin extends user{
-   // public static $status="Not Active ";//! higher priority 
-   public function login($arg){//?not support overload 
-      print("login as admin");
-   }
-}
-$admin=new admin();
-$admin->login();
-echo "<br>";
-echo $admin::$status;
-echo "<br>";
-$admin->logout();
-
+//    }
+//    public function logout(){
+//       print("logout");
+//    }
+// }
+// class normal_user extends user{
+//    public function login($arg){
+//       print("login as normal user");
+//    }
+// }
+// class admin extends user{
+//    // public static $status="Not Active ";//! higher priority 
+//    public function login($arg){//?not support overload 
+//       print("login as admin");
+//    }
+// }
+// $admin=new admin();
+// $admin->login('test');
+// echo "<br>";
+// echo $admin::$status;
+// echo "<br>";
+// $admin->logout();
+//h1 
 
 
 
