@@ -73,33 +73,61 @@
 //   $student->message="task 2 complete";
 //   $student->openchat()->send()->closeChat()->openChat();
 //h1 Refer to the class only object can't access it 
-class user{
+// class user{
+//    public $name;
+//    public static $status="active";
+//    public const bonus=50;
+//    public function login(){
+//       $this->name;
+//       $this->register();
+//       user::$status;
+//       user::bonus;
+//       user::logout();
+//       //self => refer to current class 
+//       self::$status;
+//       self::bonus;
+//       self::logout();
+
+//    }
+//    public function register(){
+
+//    }
+//    public static function logout(){
+//       echo "logout";
+//    }
+// }
+// $user=new user();
+// print_r($user);// will print only the name of the class
+// echo user::$status; //access directly with the class name 
+// user::logout();
+//h1 inheritance 
+ class user{//! final class  keyword can't extends other classes
    public $name;
    public static $status="active";
-   public const bonus=50;
-   public function login(){
-      $this->name;
-      $this->register();
-      user::$status;
-      user::bonus;
-      user::logout();
-      //self => refer to current class 
-      self::$status;
-      self::bonus;
-      self::logout();
+   public function login($args){//? support override  not support overload
 
    }
-   public function register(){
-
-   }
-   public static function logout(){
-      echo "logout";
+   public function logout(){
+      print("logout");
    }
 }
-$user=new user();
-print_r($user);// will print only the name of the class
-echo user::$status; //access directly with the class name 
-user::logout();
+class normal_user extends user{
+   public function login($arg){
+      print("login as normal user");
+   }
+}
+class admin extends user{
+   // public static $status="Not Active ";//! higher priority 
+   public function login($arg){//?not support overload 
+      print("login as admin");
+   }
+}
+$admin=new admin();
+$admin->login();
+echo "<br>";
+echo $admin::$status;
+echo "<br>";
+$admin->logout();
 
 
 
