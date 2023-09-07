@@ -128,8 +128,159 @@
 // echo $admin::$status;
 // echo "<br>";
 // $admin->logout();
-//h1 
+//h1 Access modifiers 
+// access modifiers => visibility members
+// (public , protected ,private)
+// class parentcclass {
+//       public $name1='adham';
+//       protected $name2='mohamed';
+//       private $name3='Ahmed';
+//       public function print_name(){//? all can access inside the class 
+//         print($this->name1);
+//         print($this->name2);
+//         print($this->name3);
+//       }
+// }
+// class childclass extends parentcclass{
+//   public function print_name(){
+//     print($this->name2);//! name3 will not work 
+//   }
+// }
+// $object1=new parentcclass;
+// echo $object1->name1;//global scope 
+// echo $object1->name2;//! can not be access in global protected 
+// echo $object1->name3;//! can not be access in global private 
+//h2 the Rule is 
+/**
+ * h2 public can be access any where 
+ * h2 protected can be accessed in global and class that inherit child scope 
+ * h2 private only can be accessed in class scope only
+ */
+//h1 Encapsulation 
+// class user {
+//     private $name;
+//     public function setname($name)
+//     {
+//       # you can make any condition here before user can set it 
+//       //! for example you can check if this string 
+//       if(is_string($name)):
+//       $this->name=$name;
+//       else:
+//           $this->name='Only Enter String';
+//       endif;
+//     }
+//     public function getname(){
+//       return $this->name;
+//     }
+// }
+// $object = new user();
+// $object->setname(1);
+// echo $object->getname();
+//h1 magic method 
+// class product {
+//   public function __construct(){
+//     echo "ok";
+//   }
+//   public function __destruct(){
+//     echo "ok2";
+//   }
+// }
+// //? inherence 
+// class specs extends product{
 
+// }
+// $object = new product();
+// $object = new specs();//overwrite
+// class human { //! extension called setter and getter 
+//   private $color;
+//   private $name;
+//   private $email;
+// }//! note that you can use constructor to pass all values when you create the object 
+//h1 magic constant 
+//? difference between relative path and absolute path when to use ? 
+// class magicconstants{
+  // public static function test(){
+    // echo __DIR__;
+    // echo __FILE__;
+    // echo __CLASS__;
+    // echo __FUNCTION__;
+    // echo __METHOD__;
+//     echo __LINE__;
+//   }
+// }
+// magicconstants::test();
+//h1 Abstraction method without body abstract class 
+//! can't take object from abstract class but can inherit from it 
+//! we can use it in CRUD Operation products , offers , coupons 
+// abstract class person {
+//   public static $email;
+//   public $name;
+//   public const pi=3.14;
+//    protected abstract function login();//? should have implementation in child class 
+//    public abstract function logout();
+//    public function test(){
+
+//    }
+//    public static function test2(){
+
+//    }
+// }
+// class user extends person   {
+//   function login() {
+//       # code ...  
+    
+//   }
+//   function logout()   {
+//     # code ...
+//   }
+// }
+// class admins extends person {
+//   function login() {
+
+    
+//   }
+//   function logout()  {
+    
+//   }
+// }
+//h1 interface only abstract methods all public 
+//! i can implement and extends from other class 
+//! i can implement more than one interface multi 
+//! methods can't be protected or public 
+interface curd {
+  function create();
+  function read();
+  function update();
+  function delete ();
+}
+interface operations {
+  function login();
+  function logout();
+}
+class parentcalss{
+
+}
+class products extends parentcalss implements curd,operations  {
+  function create(){
+
+  }
+  function read(){
+
+  }
+  function update(){
+
+  }
+  function delete (){
+
+  }
+  function login(){
+
+  }
+  function logout(){
+
+  }
+
+}
 
 
 
