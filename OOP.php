@@ -352,9 +352,33 @@
 // // $user->uploadExcelV1();
 // $user->uploadExcelV1FromMediaTrait();
 //! read about 
-// <!-- # difference between relative path , absolute path , when to use ? -->
+// <!-- # difference between relative path , absolute path , when to use ? --> //? done 
 // <!-- namespace  -->
 // <!-- class autoloading -->
+//h1 NameSpaces 
+//! must be the first thing in php file 
+//! organization by grouping classes that working together to perform task
+//! they allow the same name used for more than on class 
+// namespace mytest;
+// include 'test.php';
+// include 'test2.php';
+// use test\AppleDevice as appleblack;
+// use test2\AppleDevice as applered;
+// $object=new appleblack();
+// $object2=new applered();
+// echo $object->color;// black
+// echo $object2->color;// red two classes have the same name
+//h1 autoloading used to include many classes 
+spl_autoload_register(function ($class) {
+  require "classes/$class.php";
+});
+$object = new cat();
+$object->say();
+echo "<br>";
+$object2 = new dog();
+$object2->say();
+
+
 //?##################################################################################################################################
 /*
   =====================================================================================
