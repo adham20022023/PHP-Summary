@@ -368,15 +368,17 @@
 // $object2=new applered();
 // echo $object->color;// black
 // echo $object2->color;// red two classes have the same name
+
 //h1 autoloading used to include many classes 
-spl_autoload_register(function ($class) {
-  require "classes/$class.php";
-});
-$object = new cat();
-$object->say();
-echo "<br>";
-$object2 = new dog();
-$object2->say();
+// spl_autoload_register(function ($class) {
+//   require "classes/$class.php";//! do not use require_once
+// });
+// //! the class name should have the same file name
+// $object = new cat();
+// $object->say();
+// echo "<br>";
+// $object2 = new dog();
+// $object2->say();
 
 
 //?##################################################################################################################################
