@@ -247,40 +247,40 @@
 //! i can implement and extends from other class 
 //! i can implement more than one interface multi 
 //! methods can't be protected or public 
-interface curd {
-  function create();
-  function read();
-  function update();
-  function delete ();
-}
-interface operations {
-  function login();
-  function logout();
-}
-class parentcalss{
+// interface curd {
+//   function create();
+//   function read();
+//   function update();
+//   function delete ();
+// }
+// interface operations {
+//   function login();
+//   function logout();
+// }
+// class parentcalss{
 
-}
-class products extends parentcalss implements curd,operations  {
-  function create(){
+// }
+// class products extends parentcalss implements curd,operations  {
+//   function create(){
 
-  }
-  function read(){
+//   }
+//   function read(){
 
-  }
-  function update(){
+//   }
+//   function update(){
 
-  }
-  function delete (){
+//   }
+//   function delete (){
 
-  }
-  function login(){
+//   }
+//   function login(){
 
-  }
-  function logout(){
+//   }
+//   function logout(){
 
-  }
+//   }
 
-}
+// }
 
 
 
