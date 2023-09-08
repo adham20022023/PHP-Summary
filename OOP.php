@@ -315,43 +315,46 @@
 // $object->uploadphoto();
 // echo $object::x; 
 //h2 *****************
-trait media {
-  public function uploadPhotoV1()
-  {
-      echo "upload photo v1 <br>";
-  }
+// trait media {
+//   public function uploadPhotoV1()
+//   {
+//       echo "upload photo v1 <br>";
+//   }
 
-  public function uploadExcelV1()
-  {
-      echo "upload excel v1 form media";
-  }
-}
+//   public function uploadExcelV1()
+//   {
+//       echo "upload excel v1 form media";
+//   }
+// }
 
-trait mediaV2 {
-  public function uploadPhotoV2()
-  {
-      echo "upload photo v2 <br>";
-  }
-  public function uploadExcelV1()
-  {
-      echo "upload excel v1 form mediav2";
-  }
-}
+// trait mediaV2 {
+//   public function uploadPhotoV2()
+//   {
+//       echo "upload photo v2 <br>";
+//   }
+//   public function uploadExcelV1()
+//   {
+//       echo "upload excel v1 form mediav2";
+//   }
+// }
 
-trait generalTrait {
-  use media,mediaV2 {
-      media::uploadExcelV1 AS uploadExcelV1FromMediaTrait;
-      mediaV2::uploadExcelV1 insteadOf media;
-  }
-}
+// trait generalTrait {
+//   use media,mediaV2 {
+//       media::uploadExcelV1 AS uploadExcelV1FromMediaTrait;
+//       mediaV2::uploadExcelV1 insteadOf media;
+//   }
+// }
 
-class users {
-  use generalTrait;
-}
-$user = new users;
-// $user->uploadExcelV1();
-$user->uploadExcelV1FromMediaTrait();
-
+// class users {
+//   use generalTrait;
+// }
+// $user = new users;
+// // $user->uploadExcelV1();
+// $user->uploadExcelV1FromMediaTrait();
+//! read about 
+// <!-- # difference between relative path , absolute path , when to use ? -->
+// <!-- namespace  -->
+// <!-- class autoloading -->
 //?##################################################################################################################################
 /*
   =====================================================================================
