@@ -247,6 +247,7 @@
 //! i can implement and extends from other class 
 //! i can implement more than one interface multi 
 //! methods can't be protected or public 
+//! only can use abstract methods and constants
 // interface curd {
 //   function create();
 //   function read();
@@ -281,8 +282,75 @@
 //   }
 
 // }
+//h1 polymorphism
+//! poly => many
+//! morph => forms 
+//! methods in different class that do similar things should have the same name 
+//!polymorphism allows objects of different class to respond differently based on the same message 
 
+// //h1 traits make php act as multi inheritance 
+// trait media {
+//   public $name;
+//   //! public const x=5; trait can not have constant 
+//   public function uploadphoto(){
+//     echo "upload photo";
+//   }
+// }
+// trait media2 {
+//   public function uploadvideo(){
+//     echo "upload video";
+//   }
+// }
+// class users{
+//   use all;
+// }
+// trait all { //! one trait can have many traits 
+//   use media;
+//   use media2;
+// }
+// class products {
+//   use all;
+// }
+// $object = new users();
+// $object->uploadphoto();
+// echo $object::x; 
+//h2 *****************
+trait media {
+  public function uploadPhotoV1()
+  {
+      echo "upload photo v1 <br>";
+  }
 
+  public function uploadExcelV1()
+  {
+      echo "upload excel v1 form media";
+  }
+}
+
+trait mediaV2 {
+  public function uploadPhotoV2()
+  {
+      echo "upload photo v2 <br>";
+  }
+  public function uploadExcelV1()
+  {
+      echo "upload excel v1 form mediav2";
+  }
+}
+
+trait generalTrait {
+  use media,mediaV2 {
+      media::uploadExcelV1 AS uploadExcelV1FromMediaTrait;
+      mediaV2::uploadExcelV1 insteadOf media;
+  }
+}
+
+class users {
+  use generalTrait;
+}
+$user = new users;
+// $user->uploadExcelV1();
+$user->uploadExcelV1FromMediaTrait();
 
 //?##################################################################################################################################
 /*
